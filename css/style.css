@@ -1,0 +1,190 @@
+@font-face{
+	font-family: 'sofia';
+	src: url('../fonts/sofia/regular.eot');
+	src: url('../fonts/sofia/regular.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/sofia/regular.woff') format('woff'),
+	     url('../fonts/sofia/regular.ttf') format('truetype'),
+	     url('../fonts/sofia/regular.svg#webfont') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face{
+	font-family: 'sofia';
+	src: url('../fonts/sofia/italic.eot');
+	src: url('../fonts/sofia/italic.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/sofia/italic.woff') format('woff'),
+	     url('../fonts/sofia/italic.ttf') format('truetype'),
+	     url('../fonts/sofia/italic.svg#webfont') format('svg');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face{
+	font-family: 'sofia';
+	src: url('../fonts/sofia/black.eot');
+	src: url('../fonts/sofia/black.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/sofia/black.woff') format('woff'),
+	     url('../fonts/sofia/black.ttf') format('truetype'),
+	     url('../fonts/sofia/black.svg#webfont') format('svg');
+  font-style: normal;
+  font-weight: bold;
+}
+
+/*----------------------------------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html {
+  font-size: 14px;
+  font-family: sofia;
+  color: #4A4A5A;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0 auto 4rem;
+  padding: 2rem;
+  max-width: 45rem;
+}
+
+header, section {
+  display: block;
+}
+
+h1 {
+	margin: 1.2em 0 0;
+  font-size: 3em;
+  line-height: 1em;
+  white-space: pre-line;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 1.2em 0 0.5em;
+  font-weight: bold;
+	border-top: 0.2em solid;
+}
+
+h2:after,
+h2::after {
+  content: '.';
+}
+
+h3 {
+  margin: 1.8em 0 0.3em 0;
+  line-height: 1.3em;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+	white-space: pre-line;
+}
+
+h2 + h3 {
+  margin-top: 1.2em;
+}
+
+aside {
+  font-size: 0.9rem;
+  display: block;
+  line-height: 1.4em;
+  font-style: italic;
+  margin: 1rem 0;
+  position: relative;
+}
+
+aside:before,
+aside::before {
+  content: '*';
+  font-size: 1.5em;
+	font-weight: bold;
+  position: absolute;
+  left: -0.55em;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color: inherit;
+  position: relative;
+  border-bottom: 0.18em solid #49BEAA;
+}
+
+a:focus {
+	outline: none;
+	border-bottom-width: 0.36em;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li:after,
+ul li::after {
+  content: " //";
+  font-weight: bold;
+}
+
+ul li:last-child::after {
+  content: none;
+}
+
+dl {
+  position: relative;
+}
+
+dd {
+  margin-left: 2rem;
+}
+
+dt {
+  font-weight: bold;
+  position: absolute;
+}
+
+dt:nth-of-type(3) {
+  font-size: 2em;
+  line-height: 1.1em;
+}
+
+@media screen and (min-width: 40rem) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media print {
+  html {
+    font-size: 12px;
+  }
+
+	a {
+		border-bottom: none;
+	}
+
+  header + section h3:nth-of-type(3) {
+    page-break-before: always;
+  }
+}
+
+::selection {
+  background: #0CAADC;
+  color: #ffffff;
+}

@@ -1,1 +1,120 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Simon Lawrence</title>
+
+  <style>
+  @font-face{
+    font-family: 'sofia';
+    src: url('./fonts/sofia/black.eot');
+    src: url('./fonts/sofia/black.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/sofia/black.woff') format('woff'),
+         url('./fonts/sofia/black.ttf') format('truetype'),
+         url('./fonts/sofia/black.svg#webfont') format('svg');
+    font-style: normal;
+    font-weight: 900;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  html {
+    font-size: 14px;
+    font-family: sofia;
+    color: white;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background: #49BEAA;
+    background: linear-gradient(45deg, #49beaa 50%, #54c2af 50%);
+    min-height: 100%;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+  }
+
+  body {
+    padding: 2em;
+    padding-top: 10vh;
+    margin: 0 auto;
+    max-width: 40em;
+  }
+
+  body > * {
+    font-size: 2.5em;
+  }
+
+  em {
+    font-style: normal;
+    color: #4A4A5A;
+  }
+
+  hr {
+    border-top: 0.15em solid;
+    margin: 0.5em 0;
+  }
+
+  ul {
+    list-style: none;
+    line-height: 1.3em;
+  }
+
+  a {
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    color: inherit;
+    position: relative;
+  }
+
+  a:focus {
+    color: #4A4A5A;
+  }
+
+  a:before, a::before {
+    content: '-';
+    position: absolute;
+    left: -0.6em;
+  }
+
+  a:after, a::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    border-bottom: 0.15em solid;
+  }
+
+  @media (min-width: 40em) {
+    html {
+      font-size: 18px;
+    }
+
+    body {
+      padding: 4em;
+      padding-top: 18vh;
+    }
+  }
+  </style>
+</head>
+
+<body>
+    <p>Simon Lawr&shy;ence is a <em>full stack</em>, <em>poly&shy;glot</em> web devel&shy;oper living in Barcelona.</p>
+    <hr>
+    <ul>
+      <li><a href="./cv">CV</a></li>
+      <li><a href="https://github.com/silawrenc">GitHub</a></li>
+      <li><a href="mailto:hello@simonlawrence.xyz">contact</a></li>
+    </ul>
+</body>
+</html>
