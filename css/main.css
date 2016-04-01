@@ -1,0 +1,170 @@
+@font-face {
+    font-family: montserrat;
+    src: url(fonts/montserrat/regular.otf);
+}
+
+@font-face {
+    font-family: montserrat-semibold;
+    src: url(fonts/montserrat/semibold.otf);
+}
+
+@font-face {
+    font-family: montserrat-black;
+    src: url(fonts/montserrat/black.otf);
+}
+
+/**
+ *  general page scaffolding
+ * -----------------------------------------------------------------------------
+ **/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: montserrat;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  background: #81AFD3;/*#93BEDF;*/
+  color: #E1EFF6;
+}
+
+a {
+  text-decoration: none;
+  color: #ECCBD9;
+  border-bottom: 1px solid #ECCBD9;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+p {
+  line-height: 1.2em;
+}
+
+p + p {
+  margin-top: 1.2em;
+}
+
+footer  {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 8rem;
+  overflow: hidden;
+}
+
+footer p {
+  font-size: 4.5em;
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+  position: absolute;
+  bottom: -0.2rem;
+  left: 7.4rem;
+  font-family: montserrat-black;
+  opacity: 0.3;
+  line-height: 0.6em;
+}
+
+body > header, body > section {
+  margin: 0 2.5rem;
+}
+
+header h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  color: #B0D0D3;
+  font-family: montserrat;
+}
+
+header span {
+  font-family: montserrat-black;
+}
+
+aside {
+  font-size: 0.75rem;
+  font-style: italic;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: montserrat-semibold;
+  margin: 1em 0 0 -0.07em;
+}
+
+/*-lists-*/
+ul {list-style: none;
+    padding: 0;
+}
+ul li {
+  display: inline-block;
+}
+ul li:nth-child(n+2):before {
+  content: "// ";
+  color: #B0D0D3;
+}
+
+dl {
+  position: relative;
+}
+dd {
+  margin-left: 2rem;
+}
+dt {
+  position: absolute;
+  color: #B0D0D3;
+  font-family: montserrat-semibold;
+}
+
+body {
+  margin-bottom: 8rem;
+}
+
+@media (min-width:769px) {
+  html {
+    font-size: 16px;
+  }
+
+  body > header, body > section {
+    margin: 0 8rem;
+    max-width: 40rem;
+  }
+
+  body.cv > header, .cv > section {
+    margin-left: 15rem;
+    margin-right: 2.5rem;
+  }
+
+  aside {
+    text-align: right;
+    width: 12rem;
+    position: relative;
+    float: left;
+    margin-left: -12rem;
+    top: -2.4rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width:768px) {
+  aside {
+    margin-top: 0.5rem;
+    border-left: 3px solid #B0D0D3;
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  dd + aside {
+    margin-left: 2rem;
+  }
+}
