@@ -1,0 +1,215 @@
+@font-face{
+  font-family: 'sofia';
+  src: url('./font/sofia/regular.eot');
+  src: url('./font/sofia/regular.eot?#iefix') format('embedded-opentype'),
+       url('./font/sofia/regular.woff') format('woff'),
+       url('./font/sofia/regular.ttf') format('truetype'),
+       url('./font/sofia/regular.svg#webfont') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'sofia';
+  src: url('./font/sofia/italic.eot');
+  src: url('./font/sofia/italic.eot?#iefix') format('embedded-opentype'),
+       url('./font/sofia/italic.woff') format('woff'),
+       url('./font/sofia/italic.ttf') format('truetype'),
+       url('./font/sofia/italic.svg#webfont') format('svg');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'sofia';
+  src: url('./font/sofia/black.eot');
+  src: url('./font/sofia/black.eot?#iefix') format('embedded-opentype'),
+       url('./font/sofia/black.woff') format('woff'),
+       url('./font/sofia/black.ttf') format('truetype'),
+       url('./font/sofia/black.svg#webfont') format('svg');
+  font-style: normal;
+  font-weight: bold;
+}
+
+/*----------------------------------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html {
+  font-size: 14px;
+  font-family: sofia;
+  background: #f8f0ed;
+  color: #0d3359;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0 auto 4rem;
+  padding: 2rem;
+  max-width: 45rem;
+}
+
+header, section {
+  display: block;
+}
+
+h1 {
+  margin: 1.2em 0 0 -0.05em;
+  font-size: 3em;
+  line-height: 1em;
+  white-space: pre-line;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 1.2em 0 0.5em;
+  font-weight: bold;
+  border-top: 0.2em solid;
+}
+
+h2::after {
+  content: '.';
+}
+
+header + section > h2 {
+    margin-top: 0.8em;
+}
+
+h3 {
+  margin: 1.8em 0 0.3em 0;
+  line-height: 1.3em;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: pre-line;
+}
+
+h2 + h3 {
+  margin-top: 1.2em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+aside {
+  font-size: 0.9rem;
+  display: block;
+  font-style: italic;
+  margin: 1rem 0;
+  position: relative;
+  display: block;
+}
+
+aside::before {
+  content: '*';
+  font-size: 1.5em;
+  position: absolute;
+  left: -0.55em;
+  top: -0.3em;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color: inherit;
+  position: relative;
+}
+
+a:focus {
+  outline: none;
+  background: #0d3359;
+  color: #f8f0ed;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li::after {
+  content: " //";
+  font-weight: bold;
+}
+
+ul li:last-child::after {
+  content: none;
+}
+
+dl {
+  position: relative;
+}
+
+dd {
+  margin-left: 2rem;
+}
+
+dt {
+  font-weight: bold;
+  position: absolute;
+}
+
+dt:nth-of-type(3) {
+  font-size: 2em;
+  line-height: 1.1em;
+}
+
+header > a[href="https://www.github.com/silawrenc"] {
+    height: 1.5rem;
+    width: 1.1rem;
+    padding: 0.2rem 0;
+    display: block;
+    color: inherit;
+}
+
+header > a[href="https://www.github.com/silawrenc"]:focus {
+    border-bottom: 0.1rem solid;
+    padding-bottom: 0rem;
+    background: none;
+}
+
+header > a[href="https://www.github.com/silawrenc"]::before {
+    content: '';
+    height: 1.1rem;
+    width: 1.1rem;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%221.414%22%20fill%3D%22%230d3359%22%3E%3Cpath%20d%3D%22M8%200C3.58%200%200%203.582%200%208c0%203.535%202.292%206.533%205.47%207.59.4.075.547-.172.547-.385%200-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056%201.225.824%201.225.824.714%201.223%201.873.87%202.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953%200-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117%200%200%20.67-.215%202.2.82.64-.178%201.32-.266%202-.27.68.004%201.36.092%202%20.27%201.52-1.035%202.19-.82%202.19-.82.43%201.102.16%201.915.08%202.117.51.56.82%201.274.82%202.147%200%203.073-1.87%203.75-3.65%203.947.28.24.54.73.54%201.48%200%201.07-.01%201.93-.01%202.19%200%20.21.14.46.55.38C13.71%2014.53%2016%2011.53%2016%208c0-4.418-3.582-8-8-8%22%2F%3E%3C%2Fsvg%3E");
+}
+
+@media screen and (min-width: 40rem) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media print {
+  html {
+	font-size: 12px;
+  }
+
+  body {
+      color: #4a4a4a;
+      background: none;
+  }
+
+  header + section h3:nth-of-type(3) {
+	page-break-before: always;
+  }
+}
