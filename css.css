@@ -1,0 +1,194 @@
+@font-face{
+  font-family: 'sofia';
+  src: url('./font/sofia/regular.eot');
+  src: url('./font/sofia/regular.eot?#iefix') format('embedded-opentype'),
+       url('./font/sofia/regular.woff') format('woff'),
+       url('./font/sofia/regular.ttf') format('truetype'),
+       url('./font/sofia/regular.svg#webfont') format('svg');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'sofia';
+  src: url('./font/sofia/italic.eot');
+  src: url('./font/sofia/italic.eot?#iefix') format('embedded-opentype'),
+       url('./font/sofia/italic.woff') format('woff'),
+       url('./font/sofia/italic.ttf') format('truetype'),
+       url('./font/sofia/italic.svg#webfont') format('svg');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face{
+  font-family: 'sofia';
+  src: url('./font/sofia/bold.eot');
+  src: url('./font/sofia/bold.eot?#iefix') format('embedded-opentype'),
+       url('./font/sofia/bold.woff') format('woff'),
+       url('./font/sofia/bold.ttf') format('truetype'),
+       url('./font/sofia/bold.svg#webfont') format('svg');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face{
+  font-family: 'sofia';
+  src: url('./font/sofia/black.eot');
+  src: url('./font/sofia/black.eot?#iefix') format('embedded-opentype'),
+       url('./font/sofia/black.woff') format('woff'),
+       url('./font/sofia/black.ttf') format('truetype'),
+       url('./font/sofia/black.svg#webfont') format('svg');
+  font-style: normal;
+  font-weight: 900;
+}
+
+/*----------------------------------------------------------------------------*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;;
+}
+
+html {
+  font-size: 14px;
+  font-family: sofia, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #3f4950;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem 10rem;
+  max-width: 55rem;
+}
+
+header, section, aside {
+  display: block;
+}
+
+svg {
+  height: 1em;
+  width: 1em;
+  position: relative
+  top: 0.15em;
+}
+
+h1 {
+  margin: 2em 0 0 -0.05em;
+  font-size: 2.6em;
+  line-height: 1em;
+  white-space: pre-line;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  position: relative;
+  right: calc(100% + 1rem);
+  top: 2.3rem;
+  margin-top: 1rem;
+  text-align: right;
+}
+
+h2::after {
+  content: ' \2014';
+}
+
+h3 {
+  margin: 1.8em 0 0.3em 0;
+  line-height: 1.3em;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  /* white-space: pre-line; */
+}
+
+h3 > span {
+  font-weight: normal;
+  font-style: italic;
+}
+
+h3:first-of-type {
+  margin-top: 0.15rem;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+aside {
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 1.8rem 0;
+  position: relative;
+}
+
+aside::before {
+  content: '*';
+  font-size: 1.5em;
+  position: absolute;
+  left: -0.55em;
+  top: -0.3em;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  color: inherit;
+  position: relative;
+}
+
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li::after,
+header > span::before {
+  content: " • ";
+}
+
+ul li:last-child::after {
+  content: none;
+}
+
+dl {
+  position: relative;
+}
+
+dd {
+  margin-left: 2rem;
+}
+
+dt {
+  font-weight: bold;
+  position: absolute;
+}
+
+dt:nth-of-type(3) {
+  font-size: 2em;
+  line-height: 1.1em;
+}
+
+@media print {
+  html {
+	 font-size: 11px;
+  }
+
+  section h3:nth-of-type(4) {
+	  page-break-before: always;
+  }
+}
